@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            font: 10pt 'Arial';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        div {
+            padding: 20px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos do DOM</h1>
+
+    <hr><hr>
+
+    <div id="area" onclick="clicarArea()">Interaja</div>
+    <div id="area2" onmouseenter="clicarArea2()">Interaja</div>
+    <div id="area3" onmouseleave="foraArea3()">Interaja</div>
+    <div id="uniaoarea4" onclick="clicarArea4()" onmouseleave="dentroArea4()"" uniaoarea4()">Interaja</div>
+
+    <script>
+        function clicarArea() {
+            let a = document.getElementById('area');
+            a.innerText = 'Clicou!';
+            a.style.backgroundColor = 'yellow';
+            
+        }
+
+        function clicarArea2() {
+            let b = document.getElementById('area2');
+            b.innerText = 'Entrou!';
+            b.style.backgroundColor = 'blue';
+            
+        }
+
+        function foraArea3() {
+            let c = document.getElementById('area3');
+            c.innerText = 'Saiu!';
+            c.style.backgroundColor = 'purple';
+            
+        }
+
+        function clicarArea4() {
+            let d = document.getElementById('area4');
+            d.innerText = 'Unidos Venceremos!';
+            d.style.backgroundColor = 'dodgerblue';
+        }
+
+        function dentroArea4() {
+            let d = document.getElementById('area4');
+            d.innerText = 'Entrou!';
+            d.style.backgroundColor = 'hotpink';
+        }
+
+        function foraArea4() {
+            let d = document.getElementById('area4');
+            d.innerText = 'Fora!';
+            d.style.backgroundColor = 'orange';
+        }
+    </script>
+</body>
+
+</html>

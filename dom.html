@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            background-color: rgb(30, 223, 40);
+            color: rgb(51, 78, 253);
+            font: normal 16px 'Arial';
+        }
+
+        h1 {
+          text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Iniciando estudo com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+
+    <div id="sms" class="sms">
+        Mensagem de texto via sms
+    </div>
+
+    <p>Aprendendo a usar <spam name="DOM">DOM</spam></p>
+
+    <!-- <p id="msn">Jadson que ir para o quartel junto com Erick Medeiros</p> -->
+
+
+    <script>
+
+        let p1 = window.document.getElementsByTagName('p')[0];
+
+        // p1.style.color = 'red';
+
+        // // document.write(p1[0].innerText);
+
+        // // let p2 = document.getElementsById('msn');
+
+        // let p2 = document.getElementsByTagName('p')[1];
+
+        // document.write(p2.innerHTML);
+
+        // window.alert(msn.innerHTML);
+
+        let corpo = window.document.body
+
+        // corpo.style.background = 'black';
+
+        document.write(window.document.URL)
+
+        let d = window.document.querySelector('div#sms');
+
+        let d1 = window.document.querySelector('div.sms');
+
+        d.style.background = 'black';
+
+        d1.style.color = 'hotpink';
+
+        let a = document.getElementsByName ('DOM')[0];
+
+        a.style.background='purple';
+
+
+    </script>
+
+</body>
+</html>
